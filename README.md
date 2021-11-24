@@ -13,7 +13,7 @@ Average tariff rates are calculated by the weighted average of tariff on differe
 
 Now let's look at the dynamics of US trade balance to China and the rest of the world during the period:\
 ![plot1](output_graph/US_trade_balance.svg)\
-We can see the US trade deficit to China does fall, but at the cost of an even larger deficit to the rest of the world. That can be mainly attributed to the substitution effect of the increased price of Chinese imports. US buyers have to shift to the rest of the world bearing a higher cost.
+We can see the US trade deficit to China does fall, but at the cost of an even larger deficit to the rest of the world. That can be mainly attributed to the substitution effect of the increased price of Chinese imports. US buyers have to at least partially shift to sellers from the rest of the world bearing a higher cost. An obvious example is that in 2017 China was US's largest trade partner with a total trade of 636 billion dollars, over Canada (582 billion) and Mexico (557 billion), however, by the end of 2019, China fell to the third with a total trade of 559 billion, superseded by Mexico (615 billion) and Canada (612 billion).
 
 I include the codes for the two plots in [Background plotting](Background_plotting.ipynb).
 
