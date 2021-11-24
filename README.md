@@ -24,5 +24,8 @@ Where ![\phi](https://render.githubusercontent.com/render/math?math=%5Clarge+%5C
 ## Plotting
 In [Plots_for_import_analysis](https://github.com/2xu2/Coding-sample/blob/main/Plots_for_import_analysis.ipynb), I make two plots, one on the change in import tariffs for industries and one on the exposure change to import tariffs of counties. 
 The industry level plot shows the US subindustry groups' import tariff change. The size of the markers indicate the relative employment level of the industry subgroups in the NAICS2 industries.\
-![plot1](output_graph/US_industry_tariff_change.pdf)
+![plot1](output_graph/US_industry_import_tariff_change.svg)\
+The county level plot shows the geographic impact of the import tariff. We can see a clear geographic distribution of the policy impact. People in the east and central are much more affected by the policy in general.\
+![plot2](output_graph/County_import_tariff_exposure.svg)\
 
+## Panel regression and event study
