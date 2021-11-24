@@ -1,6 +1,6 @@
 # Trade war impact on US labor market coding sample
 ## Introduction
-This file is modified from the import analysis part of current work in progress of Xing Xu, UW-Madison (email: xxu457@wisc.edu).\
+This file is modified from the import analysis part of current work in progress of Xing Xu, UW-Madison (email: xxu457@wisc.edu). The original paper also discusses the export and joint analysis, with some extensions on import penetration from China. The essence of the work is to look at the labor market impacts of trade shocks, with detailed discussion on how the bilateral tariffs hit individual groups differently.\
 The Python file [Import Analysis](https://github.com/2xu2/Coding-sample/blob/main/Import%20analysis.ipynb) is the main file for data processing and [Plots_for_import_analysis](https://github.com/2xu2/Coding-sample/blob/main/Plots_for_import_analysis.ipynb) makes industry and county level plots. The Stata files performs panel regression and adopts an event study structure to analyze the import tariff at industry and county level. The R file (to be added in the next update) estimates the counterfactual import value supposing there was no trade war using machine learning methods. The Matlab file (to be added in the next update) performs Monte-Carlo testing with simulated data.
 
 ## Data processing
