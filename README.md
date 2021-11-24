@@ -7,12 +7,13 @@ Why I created this coding sample? I am currently seeking PhD or RAship in econom
 The Python file [Import analysis](Import%20analysis.ipynb) is the main file for data processing and [Plots_for_import_analysis](Plots_for_import_analysis.ipynb) makes industry and county level plots. The Stata files performs panel regression and adopts an event study structure to analyze the import tariff at industry and county level. The R file (to be added in the next update) estimates the counterfactual import value supposing there had been no trade war using machine learning methods. The Matlab file (to be added in the next update) performs Monte-Carlo testing with simulated data. 
 
 ## A short background
-The US-China trade war started in July, 2018 following Trump's announcement of law enforcement towards unfair trading acts of China in March, 2018. Before the phase-one trade deall in Dec, 2021, tariffs on more than $550 billion of Chinese products was imposed by the US and China retaliated with tariffs on more than $185 billion of U.S. commodities. We can see how the average tariffs increase while the trade war escalates:\
+The US-China trade war started in July, 2018 following Trump's announcement of law enforcement towards unfair trading acts of China in March, 2018. Before the phase-one trade deal in Dec, 2021, tariffs on more than $550 billion of Chinese products were imposed by the US and China retaliated with tariffs on more than $185 billion of U.S. commodities. We can see how the average tariffs increase while the trade war escalates:\
 ![plot1](output_graph/US-CN_trade_war_tariff.svg)\
 Average tariff rates are calculated by the weighted average of tariff on different industries on the HS6 basis. Note that tariffs stay high even with the partial reconcilation of phase-one trade deal, holding long-lasting impacts on both parties.
 
 Now let's look at the dynamics of US trade balance to China and the rest of the world during the period:\
 ![plot1](output_graph/US_trade_balance.svg)\
+We can see the US trade deficit to China does fall, but at the cost of an even larger deficit to the rest of the world. That can be mainly attributed to the substitution effect of the increased price of Chinese imports. US buyers have to shift to the rest of the world bearing a higher cost.
 
 I include the codes for the two plots in [Background plotting](Background_plotting.ipynb).
 
