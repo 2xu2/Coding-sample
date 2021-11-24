@@ -18,7 +18,7 @@ The tariff data is adopted from Bown (2021). Bown kept a careful log of the bila
 First, I use a weighted average of tariff rate by US total import value in 2017 to calculate the import tariff rates at the NAICS4 industry level. The next step is to project the tariff rates to US counties by estimating the county level exposures to tariff changes. Following Waugh(2019), I use the relative industry employment level to estimate each counties' exposures to the tariffs. 
 
 Formally, the county level exposure to US import tariff on China is defined as:
-![123](https://latex.codecogs.com/svg.image?\phi_{c,t}&space;=&space;&space;\sum_{i\in&space;I}&space;\frac{E_{c,i,&space;2017}}{E_{c,&space;2017}}&space;*&space;\tau^{import}_{i,&space;t}" title="\phi_{c,t} = \sum_{i\in I} \frac{E_{c,i, 2017}}{E_{c, 2017}} * \tau^{import}_{i, t})
+![123](https://latex.codecogs.com/svg.image?\phi_{c,t}&space;=&space;&space;\sum_{i\in&space;I}&space;\frac{E_{c,i,&space;2017}}{E_{c,&space;2017}}&space;*&space;\tau^{import}_{i,&space;t})
 
 where $\phi_{c,t}$ is the exposure of county $c$ to US import tariff at time $t$, $E_{c,i, 2017}$ is the employment of industry $i$ at the NAICS4 level of 2017 base value, $E_{cI, 2017}$ is the total employment at the same year, $\tau^{import}_{i, t}$ is the US import tariff by US industry $i$ at time $t$.
 
