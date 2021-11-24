@@ -4,9 +4,10 @@ This file is modified from the import analysis part of a work in progress of Xin
 
 Why I created this coding sample? I am currently seeking PhD or RAship in economics. This github project is to be a good illustration of my coding skill and individual economic research ability, and more to be a way of communication with my future co-workers and friends. If you love Econ and data science just like me and want to discuss anything, shoot me an e-mail.
 
-The Python file [Import Analysis](https://github.com/2xu2/Coding-sample/blob/main/Import%20analysis.ipynb) is the main file for data processing and [Plots_for_import_analysis](https://github.com/2xu2/Coding-sample/blob/main/Plots_for_import_analysis.ipynb) makes industry and county level plots. The Stata files performs panel regression and adopts an event study structure to analyze the import tariff at industry and county level. The R file (to be added in the next update) estimates the counterfactual import value supposing there was no trade war using machine learning methods. The Matlab file (to be added in the next update) performs Monte-Carlo testing with simulated data.
+The Python file [Import Analysis](https://github.com/2xu2/Coding-sample/blob/main/Import%20analysis.ipynb) is the main file for data processing and [Plots_for_import_analysis](https://github.com/2xu2/Coding-sample/blob/main/Plots_for_import_analysis.ipynb) makes industry and county level plots. The Stata files performs panel regression and adopts an event study structure to analyze the import tariff at industry and county level. The R file (to be added in the next update) estimates the counterfactual import value supposing there had been no trade war using machine learning methods. The Matlab file (to be added in the next update) performs Monte-Carlo testing with simulated data.
 
-## A little bit of the background
+## A short background
+The US-China trade war started in July, 2018 following Trump's announcement of law enforcement towards unfair trading acts of China in March, 2018. Before the phase-one trade deall in Dec, 2021, tariffs on more than $550 billion of Chinese products was imposed by the US and China retaliated with tariffs on more than $185 billion of U.S. commodities. We can see the dynamics of the tariffs in the following graph: ![plot1](output_graph/US-CN trade war tariff.pdf)
 
 
 ## Data processing
@@ -30,8 +31,8 @@ Where ![\phi](https://render.githubusercontent.com/render/math?math=%5Clarge+%5C
 ## Plotting
 In [Plots_for_import_analysis](https://github.com/2xu2/Coding-sample/blob/main/Plots_for_import_analysis.ipynb), I make two plots, one on the change in import tariffs for industries and one on the exposure change to import tariffs of counties. 
 The industry level plot shows the US subindustry groups' import tariff change. The size of the markers indicate the relative employment level of the industry subgroups in the NAICS2 industries.\
-![plot1](output_graph/US_industry_import_tariff_change.svg)\
+![plot3](output_graph/US_industry_import_tariff_change.svg)\
 The county level plot shows the geographic impact of the import tariff. We can see a clear geographic distribution of the policy impact. People in the east and central are much more affected by the policy in general.\
-![plot2](output_graph/County_import_tariff_exposure.svg)\
+![plot4](output_graph/County_import_tariff_exposure.svg)
 
 ## Panel regression and event study
