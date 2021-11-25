@@ -116,7 +116,7 @@ bysort naics4: replace treat_leadyr6 = iftreat*(ym >= startyr + 6)
 
 reg logemplvl treat_lagyr6-treat_lagyr2 treat_startyr treat_leadyr1-treat_leadyr6 i.ym i.naics4
 			  
-outreg2 using "import_eventstudy.tex", ctitle(OLS) label keep(treat_*) tex(frag) replace /// 
+outreg2 using "regression_results/import_eventstudy.tex", ctitle(OLS) label keep(treat_*) tex(frag) replace /// 
 	title("Event Study Estimates for Import Tariff on US Employment")
 
 * Save the coefficients and s.e. into a matrix of 17x2
