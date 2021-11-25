@@ -43,5 +43,5 @@ The county level plot shows the geographic impact of the import tariff. We can s
 ![plot4](output_graph/County_import_tariff_exposure.svg)
 
 ## Panel regression and event study
-Event study of import tariff changes on US employment:
+Event study of import tariff changes on US employment:\
 ![plot5](output_graph/import_eventstudy.svg)
