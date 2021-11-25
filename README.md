@@ -43,5 +43,8 @@ The county level plot shows the geographic impact of the import tariff. We can s
 ![plot4](output_graph/County_import_tariff_exposure.svg)
 
 ## Panel regression and event study
-Event study of import tariff changes on US employment:\
+In [Industry_regression](import_industry_analysis.do), I run panel regressions of log import tariff on US log employment, log import from China and log import from the rest of the world. The specification is:\
+
+I perform panel regressions on the entire US labor market, agriculturural industry and manufacture industry with 12th difference and generalized difference in difference. In addition, I adopt an event study structure of import tariff changes on US log employment. Note that in an event study framework I must have discrete treatments, so I define it as a switch-on treatment defined by the first time each industry sees an import tariff increase.
 ![plot5](output_graph/import_eventstudy.svg)
+The result shows that import tariff has a negative impact on total employment, which is predicted by the Ricardian model. Also I make the same plots with agriculture and manufacturing in the [output_graph](output_graph) folder. We can see it shows no evidence that import tariffs create more jobs in the two industries, contrary to what Trump claimed.
