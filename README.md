@@ -4,7 +4,7 @@ This file is modified from the import analysis part of a work in progress of Xin
 
 Why I created this coding sample? I am currently seeking PhD or RAship in economics. This github project is to be a good illustration of my coding skill and individual economic research ability, and more to be a way of communication with my future co-workers and friends. If you love Econ and data science just like me and want to discuss anything, shoot me an e-mail.
 
-The Python file [Import analysis](Import%20analysis.ipynb) is the main file for data processing and [Plots_for_import_analysis](Plots_for_import_analysis.ipynb) makes industry and county level plots. The Stata files performs panel regression and adopts an event study structure to analyze the import tariff at industry and county level. The R file (to be added in the next update) estimates the counterfactual import value supposing there had been no trade war using machine learning methods. The Matlab file (to be added in the next update) performs Monte-Carlo testing with simulated data. 
+The Python file [Import analysis](Import%20analysis.ipynb) is the main file for data processing and [Plots_for_import_analysis](Plots_for_import_analysis.ipynb) makes industry and county level plots. The Stata file [Industry_regression](import_industry_analysis.do) performs panel regression and adopts an event study structure to analyze the import tariff at industry and county level. The R file (to be added in the next update) estimates the counterfactual import value supposing there had been no trade war using machine learning methods. The Matlab file (to be added in the next update) performs Monte-Carlo testing with simulated data. 
 
 ## A short background
 The US-China trade war started in July, 2018 following Trump's announcement of law enforcement towards unfair trading acts of China in March, 2018. Before the phase-one trade deal in Dec, 2021, tariffs on more than $550 billion of Chinese products were imposed by the US and China retaliated with tariffs on more than $185 billion of U.S. commodities. We can see how the average tariffs increase while the trade war escalates:\
@@ -43,3 +43,5 @@ The county level plot shows the geographic impact of the import tariff. We can s
 ![plot4](output_graph/County_import_tariff_exposure.svg)
 
 ## Panel regression and event study
+Event study of import tariff changes on US employment:
+![plot5](output_graph/import_eventstudy.svg)
