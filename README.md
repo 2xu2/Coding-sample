@@ -43,12 +43,13 @@ The county level plot shows the geographic impact of the import tariff. We can s
 ![plot4](output_graph/County_import_tariff_exposure.svg)
 
 ## Panel regression and event study
-In [Industry_regression](import_industry_analysis.do), I run panel regressions of log import tariff on US log employment, log import from China and log import from the rest of the world. The fundamental specification is:\
+In [Industry_regression](import_industry_analysis.do), I perform panel regressions on the entire US labor market, agriculturural industry and manufacture industry with 12th difference and generalized difference in difference. The fundamental specification is:\
 ![  \log{Y_{i,t}} = \alpha \log{(1 + \tau_{i,t})}  + \delta_i + \theta_t + \epsilon_{i, t}
-](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+++%5Clog%7BY_%7Bi%2Ct%7D%7D+%3D+%5Calpha+%5Clog%7B%281+%2B+%5Ctau_%7Bi%2Ct%7D%29%7D++%2B+%5Cdelta_i+%2B+%5Ctheta_t+%2B+%5Cepsilon_%7Bi%2C+t%7D%0A)
+](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+++%5Clog%7BY_%7Bi%2Ct%7D%7D+%3D+%5Calpha+%5Clog%7B%281+%2B+%5Ctau_%7Bi%2Ct%7D%29%7D++%2B+%5Cdelta_i+%2B+%5Ctheta_t+%2B+%5Cepsilon_%7Bi%2C+t%7D%0A)\
+where Y is economic indicators, here the variables in interest are employment, import from China and the rest of the world.
 
 Check [import tariff on Chinese import](regression_results/importCN_analysis.txt), [import tariff on import from the rest of the world](regression_results/importROW_analysis.txt) and [tariff on employment](regression_results/industry_import_analysis.txt) for industrial analysis of import tariff. Note that D.12 refers to the 12th difference panel regression and DiD refers to the generalized DiD regression. Generally you can get the idea that import tariffs are not protecting US industries as supposed. Check the paper for detailed discussion on the results.
 
-I perform panel regressions on the entire US labor market, agriculturural industry and manufacture industry with 12th difference and generalized difference in difference. In addition, I adopt an event study structure of import tariff changes on US log employment. Note that in an event study framework I must have discrete treatments, so I define it as a switch-on treatment at the first time each industry sees an import tariff increase.\
+In addition, I adopt an event study structure of import tariff changes on US log employment. Note that in an event study framework I must have discrete treatments, so I define it as a switch-on treatment at the first time each industry sees an import tariff increase.\
 ![plot5](output_graph/import_eventstudy.svg)\
 The result shows that import tariff has a negative impact on total employment as predicted by the Ricardian model. Also I make the same plots with agriculture and manufacturing in the [output_graph](output_graph) folder, showing no evidence that import tariffs create more jobs in the two industries, contrary to what Trump claimed.
