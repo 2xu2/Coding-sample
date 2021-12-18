@@ -27,65 +27,65 @@ xtset naics4 ym
 
 * Regression part, we use xtreg for the 12th difference panel regression and reghdfe for the generalized Staggered DiD
 * employment
-xtreg D12.logemplvl D12.logtariff i.ym, vce(robust)
+xtreg D12.logemplvl D12.logtariff i.ym, cluster(naics4)
 outreg2 using "regression_results/industry_import_analysis.tex", ctitle(D.12) keep(D12.logtariff) addtext(Subsample, ALL) label tex(frag) replace /// 
 title("Twelfth Difference and DiD panel regression of Log employment")
 
-xtreg D12.logemplvl D12.logtariff i.ym if naics2 == 11, vce(robust)
+xtreg D12.logemplvl D12.logtariff i.ym if naics2 == 11, cluster(naics4)
 outreg2 using "regression_results/industry_import_analysis.tex", ctitle(D.12) keep(D12.logtariff) addtext(Subsample, Agriculture) label tex(frag) append
 
-xtreg D12.logemplvl D12.logtariff i.ym if naics2 == 31|naics2 == 32|naics2 == 33, vce(robust)
+xtreg D12.logemplvl D12.logtariff i.ym if naics2 == 31|naics2 == 32|naics2 == 33, cluster(naics4)
 outreg2 using "regression_results/industry_import_analysis.tex", ctitle(D.12) keep(D12.logtariff) addtext(Subsample, Manufacture) label tex(frag) append 
 
 
-reghdfe logemplvl logtariff, absorb(ym naics4)
+reghdfe logemplvl logtariff, absorb(ym naics4) cluster(naics4)
 outreg2 using "regression_results/industry_import_analysis.tex", ctitle(DiD) keep(logtariff) addtext(Subsample, All) label tex(frag) append 
 
-reghdfe logemplvl logtariff if naics2 == 11, absorb(ym naics4)
+reghdfe logemplvl logtariff if naics2 == 11,absorb(ym naics4) cluster(naics4)
 outreg2 using "regression_results/industry_import_analysis.tex", ctitle(DiD) keep(logtariff) addtext(Subsample, Agriculture) label tex(frag) append 
 
-reghdfe logemplvl logtariff if naics2 == 31|naics2 == 32|naics2 == 33, absorb(ym naics4)
+reghdfe logemplvl logtariff if naics2 == 31|naics2 == 32|naics2 == 33,absorb(ym naics4)  cluster(naics4)
 outreg2 using "regression_results/industry_import_analysis.tex", ctitle(DiD) keep(logtariff) addtext(Subsample, Manufacture) label tex(frag) append 
 
 
 * CN imports
-xtreg D12.logCNimport D12.logtariff i.ym, vce(robust)
+xtreg D12.logCNimport D12.logtariff i.ym, cluster(naics4)
 outreg2 using "regression_results/importCN_analysis.tex", ctitle(D.12) keep(D12.logtariff) addtext(Subsample, ALL) label tex(frag) replace /// 
 title("Twelfth Difference and DiD panel regression of Log import to China")
 
-xtreg D12.logCNimport D12.logtariff i.ym if naics2 == 11, vce(robust)
+xtreg D12.logCNimport D12.logtariff i.ym if naics2 == 11, cluster(naics4)
 outreg2 using "regression_results/importCN_analysis.tex", ctitle(D.12) keep(D12.logtariff) addtext(Subsample, Agriculture) label tex(frag) append
 
-xtreg D12.logimport D12.logtariff i.ym if naics2 == 31|naics2 == 32|naics2 == 33, vce(robust)
+xtreg D12.logimport D12.logtariff i.ym if naics2 == 31|naics2 == 32|naics2 == 33, cluster(naics4)
 outreg2 using "regression_results/importCN_analysis.tex", ctitle(D.12) keep(D12.logtariff) addtext(Subsample, Manufacture) label tex(frag) append 
 
-reghdfe logCNimport logtariff, absorb(ym naics4)
+reghdfe logCNimport logtariff, absorb(ym naics4) cluster(naics4)
 outreg2 using "regression_results/importCN_analysis.tex", ctitle(DiD) keep(logtariff) addtext(Subsample, All) label tex(frag) append 
 
-reghdfe logCNimport logtariff if naics2 == 11, absorb(ym naics4)
+reghdfe logCNimport logtariff if naics2 == 11, absorb(ym naics4) cluster(naics4)
 outreg2 using "regression_results/importCN_analysis.tex", ctitle(DiD) keep(logtariff) addtext(Subsample, Agriculture) label tex(frag) append 
 
-reghdfe logCNimport logtariff if naics2 == 31|naics2 == 32|naics2 == 33, absorb(ym naics4)
+reghdfe logCNimport logtariff if naics2 == 31|naics2 == 32|naics2 == 33, absorb(ym naics4) cluster(naics4)
 outreg2 using "regression_results/importCN_analysis.tex", ctitle(DiD) keep(logtariff) addtext(Subsample, Manufacture) label tex(frag) append 
 
-* Exports to the rest of the world
-xtreg D12.logimportROW D12.logtariff i.ym, vce(robust)
+* Imports from the rest of the world
+xtreg D12.logimportROW D12.logtariff i.ym, cluster(naics4)
 outreg2 using "regression_results/importROW_analysis.tex", ctitle(D.12) keep(D12.logtariff) addtext(Subsample, ALL) label tex(frag) replace /// 
 title("Twelfth Difference and DiD panel regression of log import to the rest of the world")
 
-xtreg D12.logimportROW D12.logtariff i.ym if naics2 == 11, vce(robust)
+xtreg D12.logimportROW D12.logtariff i.ym if naics2 == 11, cluster(naics4)
 outreg2 using "regression_results/importROW_analysis.tex", ctitle(D.12) keep(D12.logtariff) addtext(Subsample, Agriculture) label tex(frag) append
 
-xtreg D12.logimportROW D12.logtariff i.ym if naics2 == 31|naics2 == 32|naics2 == 33, vce(robust)
+xtreg D12.logimportROW D12.logtariff i.ym if naics2 == 31|naics2 == 32|naics2 == 33, cluster(naics4)
 outreg2 using "regression_results/importROW_analysis.tex", ctitle(D.12) keep(D12.logtariff) addtext(Subsample, Manufacture) label tex(frag) append 
 
-reghdfe logimportROW logtariff, absorb(ym naics4)
+reghdfe logimportROW logtariff, absorb(ym naics4) cluster(naics4)
 outreg2 using "regression_results/importROW_analysis.tex", ctitle(DiD) keep(logtariff) addtext(Subsample, All) label tex(frag) append 
 
-reghdfe logimportROW logtariff if naics2 == 11, absorb(ym naics4)
+reghdfe logimportROW logtariff if naics2 == 11, absorb(ym naics4) cluster(naics4)
 outreg2 using "regression_results/importROW_analysis.tex", ctitle(DiD) keep(logtariff) addtext(Subsample, Agriculture) label tex(frag) append 
 
-reghdfe logimportROW logtariff if naics2 == 31|naics2 == 32|naics2 == 33, absorb(ym naics4) 
+reghdfe logimportROW logtariff if naics2 == 31|naics2 == 32|naics2 == 33, absorb(ym naics4) cluster(naics4)
 outreg2 using "regression_results/importROW_analysis.tex", ctitle(DiD) keep(logtariff) addtext(Subsample, Manufacture) label tex(frag) append
 
 ///////////////////////////////////////////////////////////////////////////////////

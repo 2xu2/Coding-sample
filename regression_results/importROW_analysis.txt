@@ -2,16 +2,16 @@ Twelfth Difference and DiD panel regression of log import to the rest of the wor
 		(1)	(2)	(3)	(4)	(5)	(6)
 VARIABLES	LABELS	D.12	D.12	D.12	DiD	DiD	DiD
 							
-D12.logtariff	logtariff = D1,	-0.0147	1.076	-0.932			
-		(1.498)	(0.901)	(2.555)			
-logtariff	logtariff				-0.277	0.437	-0.620
-					(0.322)	(0.522)	(0.412)
-Constant	Constant	-129.9***	-53.64	-196.0**	17.69***	18.30***	17.19***
-		(49.52)	(38.91)	(85.36)	(0.0184)	(0.0261)	(0.0260)
+D12.logtariff	logtariff = D1,	0.240	1.808	0.0507			
+		(0.341)	(1.493)	(0.327)			
+logtariff	logtariff				-0.0569	-2.705	0.0262
+					(0.453)	(3.038)	(0.461)
+Constant	Constant	-53.30***	-48.34	-54.94***	19.96***	18.48***	20.24***
+		(11.49)	(33.36)	(12.03)	(0.0332)	(0.176)	(0.0355)
 							
-Observations		1,034	464	570	1,428	642	786
-R-squared					0.990	0.987	0.991
-Number of naics4		28	13	15			
+Observations		3,914	532	3,230	5,150	700	4,250
+R-squared					0.980	0.981	0.974
+Number of naics4		103	14	85			
 Subsample		ALL	Agriculture	Manufacture	All	Agriculture	Manufacture
 Robust standard errors in parentheses							
 *** p<0.01, ** p<0.05, * p<0.1							
